@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="drawer_layout" type="id" />
+    <item name="nav_view" type="id" />
+    <item name="toolbar" type="id" />
+
+    <item name="about_app_logo" type="id" />
+    <item name="about_powered_by" type="id" />
+    <item name="about_randomuser" type="id" />
+    <item name="about_and" type="id" />
+    <item name="about_watchout" type="id" />
+
+    <item name="content_owner_image" type="id" />
+    <item name="content_owner_name" type="id" />
+    <item name="content_content" type="id" />
+    <item name="content_posted_at" type="id" />
+    <item name="content_item" type="id" />
+
+    <item name="creator_text_layout" type="id" />
+    <item name="creator_text" type="id" />
+    <item name="creator_button" type="id" />
+
+    <item name="detail_image" type="id" />
+    <item name="detail_owner_name" type="id" />
+    <item name="detail_posted_at" type="id" />
+    <item name="detail_text" type="id" />
+
+    <item name="friend_image" type="id" />
+    <item name="friend_name" type="id" />
+    <item name="friend_info" type="id" />
+    <item name="friends_item" type="id" />
+
+    <item name="login_container" type="id" />
+    <item name="login_indicator" type="id" />
+
+    <item name="signin_logo" type="id" />
+    <item name="signin_email_layout" type="id" />
+    <item name="signin_email" type="id" />
+    <item name="signin_password_layout" type="id" />
+    <item name="signin_password" type="id" />
+    <item name="signin_signin_button" type="id" />
+    <item name="signin_signup_button" type="id" />
+
+    <item name="signup_icon" type="id" />
+    <item name="signup_text" type="id" />
+    <item name="signup_first_name_layout" type="id" />
+    <item name="signup_first_name" type="id" />
+    <item name="signup_last_name_layout" type="id" />
+    <item name="signup_last_name" type="id" />
+    <item name="signup_email_layout" type="id" />
+    <item name="signup_email" type="id" />
+    <item name="signup_first_password_layout" type="id" />
+    <item name="signup_first_password" type="id" />
+    <item name="signup_second_password_layout" type="id" />
+    <item name="signup_second_password" type="id" />
+    <item name="signup_legal_checkbox" type="id" />
+    <item name="signup_signup_button" type="id" />
+    <item name="signup_signin_button" type="id" />
+
+    <item name="profile_icon" type="id" />
+    <item name="profile_name_title" type="id" />
+    <item name="profile_name" type="id" />
+    <item name="profile_email_title" type="id" />
+    <item name="profile_email" type="id" />
+    <item name="profile_cell_title" type="id" />
+    <item name="profile_cell" type="id" />
+    <item name="profile_phone_title" type="id" />
+    <item name="profile_phone" type="id" />
+    <item name="profile_birthday_title" type="id" />
+    <item name="profile_birthday" type="id" />
+    <item name="profile_registered_title" type="id" />
+    <item name="profile_registered" type="id" />
+    <item name="profile_street_title" type="id" />
+    <item name="profile_street" type="id" />
+    <item name="profile_city_title" type="id" />
+    <item name="profile_city" type="id" />
+    <item name="profile_state_title" type="id" />
+    <item name="profile_state" type="id" />
+    <item name="profile_nat_title" type="id" />
+    <item name="profile_nat" type="id" />
+    <item name="profile_divider0" type="id" />
+    <item name="profile_divider1" type="id" />
+    <item name="profile_divider2" type="id" />
+
+    <item name="settings_on_off_text" type="id" />
+    <item name="settings_on_off_subtext" type="id" />
+    <item name="settings_on_off_switch" type="id" />
+    <item name="settings_duration_text" type="id" />
+    <item name="settings_duration_subtext" type="id" />
+    <item name="settings_duration_field" type="id" />
+    <item name="settings_random_text" type="id" />
+    <item name="settings_random_subtext" type="id" />
+    <item name="settings_random_switch" type="id" />
+
+
+</resources>
