@@ -15,9 +15,9 @@ import org.jetbrains.anko.custom.ankoView
 /**
  * Created by root on 7/12/17
  */
-open class _ConstraintLayout(ctx: Context): ConstraintLayout(ctx) {
+open class _ConstraintLayout(ctx: Context) : ConstraintLayout(ctx) {
 
-    inline fun <T: View> T.lparams(
+    inline fun <T : View> T.lparams(
             c: Context?,
             attrs: AttributeSet?,
             init: ConstraintLayout.LayoutParams.() -> Unit
@@ -29,7 +29,7 @@ open class _ConstraintLayout(ctx: Context): ConstraintLayout(ctx) {
         return this
     }
 
-    inline fun <T: View> T.lparams(
+    inline fun <T : View> T.lparams(
             c: Context?,
             attrs: AttributeSet?
     ): T {
@@ -39,7 +39,7 @@ open class _ConstraintLayout(ctx: Context): ConstraintLayout(ctx) {
         return this
     }
 
-    inline fun <T: View> T.lparams(
+    inline fun <T : View> T.lparams(
             width: Int = android.view.ViewGroup.LayoutParams.WRAP_CONTENT,
             height: Int = android.view.ViewGroup.LayoutParams.WRAP_CONTENT,
             init: ConstraintLayout.LayoutParams.() -> Unit
@@ -51,7 +51,7 @@ open class _ConstraintLayout(ctx: Context): ConstraintLayout(ctx) {
         return this
     }
 
-    inline fun <T: View> T.lparams(
+    inline fun <T : View> T.lparams(
             width: Int = android.view.ViewGroup.LayoutParams.WRAP_CONTENT,
             height: Int = android.view.ViewGroup.LayoutParams.WRAP_CONTENT
     ): T {
@@ -61,7 +61,7 @@ open class _ConstraintLayout(ctx: Context): ConstraintLayout(ctx) {
         return this
     }
 
-    inline fun <T: View> T.lparams(
+    inline fun <T : View> T.lparams(
             source: ViewGroup.LayoutParams?,
             init: ConstraintLayout.LayoutParams.() -> Unit
     ): T {
@@ -72,7 +72,7 @@ open class _ConstraintLayout(ctx: Context): ConstraintLayout(ctx) {
         return this
     }
 
-    inline fun <T: View> T.lparams(
+    inline fun <T : View> T.lparams(
             source: ViewGroup.LayoutParams?
     ): T {
         val layoutParams = ConstraintLayout.LayoutParams(source!!)
@@ -80,7 +80,7 @@ open class _ConstraintLayout(ctx: Context): ConstraintLayout(ctx) {
         return this
     }
 
-    inline fun <T: View> T.lparams(
+    inline fun <T : View> T.lparams(
             source: ViewGroup.MarginLayoutParams?,
             init: ConstraintLayout.LayoutParams.() -> Unit
     ): T {
@@ -91,7 +91,7 @@ open class _ConstraintLayout(ctx: Context): ConstraintLayout(ctx) {
         return this
     }
 
-    inline fun <T: View> T.lparams(
+    inline fun <T : View> T.lparams(
             source: ViewGroup.MarginLayoutParams?
     ): T {
         val layoutParams = ConstraintLayout.LayoutParams(source!!)
@@ -100,7 +100,7 @@ open class _ConstraintLayout(ctx: Context): ConstraintLayout(ctx) {
         return this
     }
 
-    inline fun <T: View> T.lparams(
+    inline fun <T : View> T.lparams(
             source: ConstraintLayout.LayoutParams?,
             init: ConstraintLayout.LayoutParams.() -> Unit
     ): T {
@@ -111,7 +111,7 @@ open class _ConstraintLayout(ctx: Context): ConstraintLayout(ctx) {
         return this
     }
 
-    inline fun <T: View> T.lparams(
+    inline fun <T : View> T.lparams(
             source: ConstraintLayout.LayoutParams?
     ): T {
         val layoutParams = ConstraintLayout.LayoutParams(source!!)

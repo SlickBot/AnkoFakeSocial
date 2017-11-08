@@ -2,7 +2,7 @@ package com.ulj.slicky.ankofakesocial.activity.login
 
 import android.support.v4.view.ViewPager
 import com.rd.PageIndicatorView
-import com.rd.animation.AnimationType
+import com.rd.animation.type.AnimationType
 import com.ulj.slicky.ankofakesocial.R
 import com.ulj.slicky.ankofakesocial.color
 import com.ulj.slicky.ankofakesocial.utils.constraintLayout
