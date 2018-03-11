@@ -1,4 +1,4 @@
-package com.ulj.slicky.ankofakesocial.utils
+package com.ulj.slicky.ankofakesocial.view
 
 import android.view.ViewGroup
 import org.jetbrains.anko.AnkoComponent

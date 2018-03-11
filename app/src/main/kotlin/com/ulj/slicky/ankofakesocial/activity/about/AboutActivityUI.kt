@@ -4,8 +4,8 @@ import android.support.constraint.ConstraintLayout.LayoutParams.PARENT_ID
 import android.widget.ImageView.ScaleType.FIT_CENTER
 import com.ulj.slicky.ankofakesocial.R
 import com.ulj.slicky.ankofakesocial.color
-import com.ulj.slicky.ankofakesocial.utils.constraintLayout
 import org.jetbrains.anko.*
+import org.jetbrains.anko.constraint.layout.constraintLayout
 import org.jetbrains.anko.sdk25.coroutines.onClick
 
 /**

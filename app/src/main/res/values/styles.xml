@@ -28,34 +28,39 @@
     </style>
 
     <!-- AppBarLayout theme. -->
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <!-- Toolbar theme. -->
-    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
     <!-- Text appearance for TextInputLayout. -->
-    <style name="TextAppearance.App.TextInputLayout" parent="@android:style/TextAppearance">
-        <item name="counterTextAppearance">@style/TextAppearance.App.TextInputLayout.Counter</item>
-        <item name="errorTextAppearance">@style/TextAppearance.App.TextInputLayout.Error</item>
-        <item name="counterOverflowTextAppearance">@style/TextAppearance.App.TextInputLayout.Error</item>
+    <style name="TextInputLayout" parent="@style/Theme.AppCompat">
+        <item name="counterTextAppearance">@style/TextInputLayout.Counter</item>
+        <item name="errorTextAppearance">@style/TextInputLayout.Error</item>
+        <item name="counterOverflowTextAppearance">@style/TextInputLayout.Error</item>
         <item name="passwordToggleTint">@color/colorTextDark</item>
-    </style>
-
-    <!-- Error theme for TextInputLayout. -->
-    <style name="TextAppearance.App.TextInputLayout.Error" parent="@android:style/TextAppearance">
-        <item name="android:textColor">@color/colorError</item>
+        <item name="colorAccent">@color/colorTextDark</item>
+        <item name="colorControlNormal">@color/colorText</item>
+        <item name="colorControlActivated">@color/colorText</item>
+        <item name="android:textColorHint">@color/colorTextDark</item>
     </style>
 
     <!-- Counter theme for TextInputLayout. -->
-    <style name="TextAppearance.App.TextInputLayout.Counter" parent="@android:style/TextAppearance">
+    <style name="TextInputLayout.Counter" parent="@android:style/TextAppearance">
         <item name="android:textColor">@color/colorTextDark</item>
         <item name="android:textSize">@dimen/textInputLayoutCounterSize</item>
+    </style>
+
+    <!-- Error theme for TextInputLayout. -->
+    <style name="TextInputLayout.Error" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/colorError</item>
     </style>
 
     <!-- Text appearance for EditText. -->
     <style name="EditText">
         <!-- Color of bottom line when EditText is focused. -->
         <item name="backgroundTint">@color/colorAccent</item>
+        <item name="colorError">@color/colorSuccess</item>
     </style>
 
     <!-- Dialog theme, mainly used for AlertDialog. -->

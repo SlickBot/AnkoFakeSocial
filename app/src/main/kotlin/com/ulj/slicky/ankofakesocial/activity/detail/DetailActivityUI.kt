@@ -1,14 +1,14 @@
 package com.ulj.slicky.ankofakesocial.activity.detail
 
+import android.support.constraint.ConstraintSet.PARENT_ID
 import android.view.Gravity
 import android.widget.ImageView
 import android.widget.TextView
 import com.ulj.slicky.ankofakesocial.R
 import com.ulj.slicky.ankofakesocial.color
-import com.ulj.slicky.ankofakesocial.utils.constraintLayout
-import com.ulj.slicky.ankofakesocial.utils.matchConstraint
-import com.ulj.slicky.ankofakesocial.utils.parentId
 import org.jetbrains.anko.*
+import org.jetbrains.anko.constraint.layout.constraintLayout
+import org.jetbrains.anko.constraint.layout.matchConstraint
 import org.jetbrains.anko.sdk25.coroutines.onClick
 
 /**
@@ -30,8 +30,8 @@ internal class DetailActivityUI :  AnkoComponent<DetailActivity> {
                 onClick { owner.onOpenProfile() }
             }.lparams(dip(80), dip(80)) {
                 margin = dip(24)
-                topToTop = parentId
-                startToStart = parentId
+                topToTop = PARENT_ID
+                startToStart = PARENT_ID
             }
 
             ownerName = textView {
@@ -42,7 +42,7 @@ internal class DetailActivityUI :  AnkoComponent<DetailActivity> {
                 topToTop = R.id.detail_image
                 bottomToTop = R.id.detail_posted_at
                 leftToRight = R.id.detail_image
-                rightToRight = parentId
+                rightToRight = PARENT_ID
             }
 
             postedAt = textView {
@@ -54,7 +54,7 @@ internal class DetailActivityUI :  AnkoComponent<DetailActivity> {
                 topToBottom = R.id.detail_owner_name
                 bottomToBottom = R.id.detail_image
                 leftToRight = R.id.detail_image
-                rightToRight = parentId
+                rightToRight = PARENT_ID
             }
 
             scrollView {

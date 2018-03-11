@@ -1,6 +1,6 @@
 @file:Suppress("ClassName", "NOTHING_TO_INLINE", "unused")
 
-package com.ulj.slicky.ankofakesocial.utils
+package com.ulj.slicky.ankofakesocial.view
 
 import android.app.Activity
 import android.content.Context

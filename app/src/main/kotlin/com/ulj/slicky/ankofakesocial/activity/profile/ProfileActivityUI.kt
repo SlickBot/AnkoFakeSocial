@@ -1,15 +1,15 @@
 package com.ulj.slicky.ankofakesocial.activity.profile
 
+import android.support.constraint.ConstraintSet.PARENT_ID
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import com.ulj.slicky.ankofakesocial.R
 import com.ulj.slicky.ankofakesocial.color
-import com.ulj.slicky.ankofakesocial.utils._ConstraintLayout
-import com.ulj.slicky.ankofakesocial.utils.constraintLayout
-import com.ulj.slicky.ankofakesocial.utils.matchConstraint
-import com.ulj.slicky.ankofakesocial.utils.parentId
 import org.jetbrains.anko.*
+import org.jetbrains.anko.constraint.layout._ConstraintLayout
+import org.jetbrains.anko.constraint.layout.constraintLayout
+import org.jetbrains.anko.constraint.layout.matchConstraint
 
 /**
  * Created by root on 7/14/17
@@ -52,9 +52,9 @@ internal class ProfileActivityUI : AnkoComponent<ProfileActivity> {
                     contentDescription = "Profile photo"
                 }.lparams(dip(200), dip(200)) {
                     margin = dip(32)
-                    topToTop = parentId
-                    startToStart = parentId
-                    endToEnd = parentId
+                    topToTop = PARENT_ID
+                    startToStart = PARENT_ID
+                    endToEnd = PARENT_ID
                 }
 
                 nameTitle = textView("Name") {
@@ -64,8 +64,8 @@ internal class ProfileActivityUI : AnkoComponent<ProfileActivity> {
                     topMargin = dip(16)
                     horizontalMargin = dip(32)
                     topToBottom = R.id.profile_icon
-                    startToStart = parentId
-                    endToEnd = parentId
+                    startToStart = PARENT_ID
+                    endToEnd = PARENT_ID
                 }
 
                 name = textView {
@@ -74,8 +74,8 @@ internal class ProfileActivityUI : AnkoComponent<ProfileActivity> {
                 }.lparams(wrapContent, wrapContent) {
                     horizontalMargin = dip(32)
                     topToBottom = R.id.profile_name_title
-                    startToStart = parentId
-                    endToEnd = parentId
+                    startToStart = PARENT_ID
+                    endToEnd = PARENT_ID
                 }
 
                 emailTitle = textView("Email") {
@@ -85,8 +85,8 @@ internal class ProfileActivityUI : AnkoComponent<ProfileActivity> {
                     topMargin = dip(16)
                     horizontalMargin = dip(32)
                     topToBottom = R.id.profile_name
-                    startToStart = parentId
-                    endToEnd = parentId
+                    startToStart = PARENT_ID
+                    endToEnd = PARENT_ID
                 }
 
                 email = textView {
@@ -95,8 +95,8 @@ internal class ProfileActivityUI : AnkoComponent<ProfileActivity> {
                 }.lparams(wrapContent, wrapContent) {
                     horizontalMargin = dip(32)
                     topToBottom = R.id.profile_email_title
-                    startToStart = parentId
-                    endToEnd = parentId
+                    startToStart = PARENT_ID
+                    endToEnd = PARENT_ID
                 }
 
                 divider0 = divider {
@@ -104,8 +104,8 @@ internal class ProfileActivityUI : AnkoComponent<ProfileActivity> {
                 }.lparams(matchConstraint, dip(3)) {
                     topMargin = dip(16)
                     topToBottom = R.id.profile_email
-                    startToStart = parentId
-                    endToEnd = parentId
+                    startToStart = PARENT_ID
+                    endToEnd = PARENT_ID
                 }
 
                 cellTitle = textView("Cell") {
@@ -115,8 +115,8 @@ internal class ProfileActivityUI : AnkoComponent<ProfileActivity> {
                     topMargin = dip(16)
                     horizontalMargin = dip(32)
                     topToBottom = R.id.profile_divider0
-                    startToStart = parentId
-                    endToEnd = parentId
+                    startToStart = PARENT_ID
+                    endToEnd = PARENT_ID
                 }
 
                 cell = textView {
@@ -125,8 +125,8 @@ internal class ProfileActivityUI : AnkoComponent<ProfileActivity> {
                 }.lparams(wrapContent, wrapContent) {
                     horizontalMargin = dip(32)
                     topToBottom = R.id.profile_cell_title
-                    startToStart = parentId
-                    endToEnd = parentId
+                    startToStart = PARENT_ID
+                    endToEnd = PARENT_ID
                 }
 
                 phoneTitle = textView("Phone") {
@@ -136,8 +136,8 @@ internal class ProfileActivityUI : AnkoComponent<ProfileActivity> {
                     topMargin = dip(16)
                     horizontalMargin = dip(32)
                     topToBottom = R.id.profile_cell
-                    startToStart = parentId
-                    endToEnd = parentId
+                    startToStart = PARENT_ID
+                    endToEnd = PARENT_ID
                 }
 
                 phone = textView {
@@ -146,8 +146,8 @@ internal class ProfileActivityUI : AnkoComponent<ProfileActivity> {
                 }.lparams(wrapContent, wrapContent) {
                     horizontalMargin = dip(32)
                     topToBottom = R.id.profile_phone_title
-                    startToStart = parentId
-                    endToEnd = parentId
+                    startToStart = PARENT_ID
+                    endToEnd = PARENT_ID
                 }
 
                 divider1 = divider {
@@ -155,8 +155,8 @@ internal class ProfileActivityUI : AnkoComponent<ProfileActivity> {
                 }.lparams(matchConstraint, dip(3)) {
                     topMargin = dip(16)
                     topToBottom = R.id.profile_phone
-                    startToStart = parentId
-                    endToEnd = parentId
+                    startToStart = PARENT_ID
+                    endToEnd = PARENT_ID
                 }
 
                 birthdayTitle = textView("Birthday") {
@@ -166,8 +166,8 @@ internal class ProfileActivityUI : AnkoComponent<ProfileActivity> {
                     topMargin = dip(16)
                     horizontalMargin = dip(32)
                     topToBottom = R.id.profile_divider1
-                    startToStart = parentId
-                    endToEnd = parentId
+                    startToStart = PARENT_ID
+                    endToEnd = PARENT_ID
                 }
 
                 birthday = textView {
@@ -176,8 +176,8 @@ internal class ProfileActivityUI : AnkoComponent<ProfileActivity> {
                 }.lparams(wrapContent, wrapContent) {
                     horizontalMargin = dip(32)
                     topToBottom = R.id.profile_birthday_title
-                    startToStart = parentId
-                    endToEnd = parentId
+                    startToStart = PARENT_ID
+                    endToEnd = PARENT_ID
                 }
 
                 registeredTitle = textView("Registered") {
@@ -187,8 +187,8 @@ internal class ProfileActivityUI : AnkoComponent<ProfileActivity> {
                     topMargin = dip(16)
                     horizontalMargin = dip(32)
                     topToBottom = R.id.profile_birthday
-                    startToStart = parentId
-                    endToEnd = parentId
+                    startToStart = PARENT_ID
+                    endToEnd = PARENT_ID
                 }
 
                 registered = textView {
@@ -197,8 +197,8 @@ internal class ProfileActivityUI : AnkoComponent<ProfileActivity> {
                 }.lparams(wrapContent, wrapContent) {
                     horizontalMargin = dip(32)
                     topToBottom = R.id.profile_registered_title
-                    startToStart = parentId
-                    endToEnd = parentId
+                    startToStart = PARENT_ID
+                    endToEnd = PARENT_ID
                 }
 
                 divider2 = divider {
@@ -206,8 +206,8 @@ internal class ProfileActivityUI : AnkoComponent<ProfileActivity> {
                 }.lparams(matchConstraint, dip(3)) {
                     topMargin = dip(16)
                     topToBottom = R.id.profile_registered
-                    startToStart = parentId
-                    endToEnd = parentId
+                    startToStart = PARENT_ID
+                    endToEnd = PARENT_ID
                 }
 
                 streetTitle = textView("Street") {
@@ -217,8 +217,8 @@ internal class ProfileActivityUI : AnkoComponent<ProfileActivity> {
                     topMargin = dip(16)
                     horizontalMargin = dip(32)
                     topToBottom = R.id.profile_divider2
-                    startToStart = parentId
-                    endToEnd = parentId
+                    startToStart = PARENT_ID
+                    endToEnd = PARENT_ID
                 }
 
                 street = textView {
@@ -227,8 +227,8 @@ internal class ProfileActivityUI : AnkoComponent<ProfileActivity> {
                 }.lparams(wrapContent, wrapContent) {
                     horizontalMargin = dip(32)
                     topToBottom = R.id.profile_street_title
-                    startToStart = parentId
-                    endToEnd = parentId
+                    startToStart = PARENT_ID
+                    endToEnd = PARENT_ID
                 }
 
                 cityTitle = textView("City") {
@@ -238,8 +238,8 @@ internal class ProfileActivityUI : AnkoComponent<ProfileActivity> {
                     topMargin = dip(16)
                     horizontalMargin = dip(32)
                     topToBottom = R.id.profile_street
-                    startToStart = parentId
-                    endToEnd = parentId
+                    startToStart = PARENT_ID
+                    endToEnd = PARENT_ID
                 }
 
                 city = textView {
@@ -248,8 +248,8 @@ internal class ProfileActivityUI : AnkoComponent<ProfileActivity> {
                 }.lparams(wrapContent, wrapContent) {
                     horizontalMargin = dip(32)
                     topToBottom = R.id.profile_city_title
-                    startToStart = parentId
-                    endToEnd = parentId
+                    startToStart = PARENT_ID
+                    endToEnd = PARENT_ID
                 }
 
                 stateTitle = textView("State") {
@@ -259,8 +259,8 @@ internal class ProfileActivityUI : AnkoComponent<ProfileActivity> {
                     topMargin = dip(16)
                     horizontalMargin = dip(32)
                     topToBottom = R.id.profile_city
-                    startToStart = parentId
-                    endToEnd = parentId
+                    startToStart = PARENT_ID
+                    endToEnd = PARENT_ID
                 }
 
                 state = textView {
@@ -269,8 +269,8 @@ internal class ProfileActivityUI : AnkoComponent<ProfileActivity> {
                 }.lparams(wrapContent, wrapContent) {
                     horizontalMargin = dip(32)
                     topToBottom = R.id.profile_state_title
-                    startToStart = parentId
-                    endToEnd = parentId
+                    startToStart = PARENT_ID
+                    endToEnd = PARENT_ID
                 }
 
                 natTitle = textView("Country") {
@@ -280,8 +280,8 @@ internal class ProfileActivityUI : AnkoComponent<ProfileActivity> {
                     topMargin = dip(16)
                     horizontalMargin = dip(32)
                     topToBottom = R.id.profile_state
-                    startToStart = parentId
-                    endToEnd = parentId
+                    startToStart = PARENT_ID
+                    endToEnd = PARENT_ID
                 }
 
                 nat = textView {
@@ -291,9 +291,9 @@ internal class ProfileActivityUI : AnkoComponent<ProfileActivity> {
                     bottomMargin = dip(16)
                     horizontalMargin = dip(32)
                     topToBottom = R.id.profile_nat_title
-                    bottomToBottom = parentId
-                    startToStart = parentId
-                    endToEnd = parentId
+                    bottomToBottom = PARENT_ID
+                    startToStart = PARENT_ID
+                    endToEnd = PARENT_ID
                 }
 
 
@@ -305,4 +305,5 @@ internal class ProfileActivityUI : AnkoComponent<ProfileActivity> {
         backgroundResource = R.color.colorPrimaryDark
         init?.invoke(this)
     }.also { addView(it) }
+
 }

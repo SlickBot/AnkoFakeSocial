@@ -1,5 +1,6 @@
 package com.ulj.slicky.ankofakesocial.activity.login
 
+import android.support.constraint.ConstraintSet.PARENT_ID
 import android.support.design.widget.TextInputEditText
 import android.support.design.widget.TextInputLayout
 import android.text.InputType
@@ -10,11 +11,10 @@ import android.widget.CheckBox
 import android.widget.ImageView
 import com.ulj.slicky.ankofakesocial.R
 import com.ulj.slicky.ankofakesocial.color
-import com.ulj.slicky.ankofakesocial.utils.constraintLayout
-import com.ulj.slicky.ankofakesocial.utils.matchConstraint
-import com.ulj.slicky.ankofakesocial.utils.parentId
-import com.ulj.slicky.ankofakesocial.utils.themedTextInputEditText
 import org.jetbrains.anko.*
+import org.jetbrains.anko.constraint.layout.constraintLayout
+import org.jetbrains.anko.constraint.layout.matchConstraint
+import org.jetbrains.anko.design.themedTextInputEditText
 import org.jetbrains.anko.design.themedTextInputLayout
 import org.jetbrains.anko.sdk25.coroutines.onClick
 
@@ -35,8 +35,8 @@ internal class SignUpFragmentUI : AnkoComponent<SignUpFragment> {
     lateinit var secondPasswordLayout: TextInputLayout
     lateinit var secondPasswordField: TextInputEditText
     lateinit var legalCheckBox: CheckBox
-    lateinit var signupButton: Button
-    lateinit var signinButton: Button
+    private lateinit var signupButton: Button
+    private lateinit var signinButton: Button
 
     override fun createView(ui: AnkoContext<SignUpFragment>) = with(ui) {
         scrollView {
@@ -48,8 +48,8 @@ internal class SignUpFragmentUI : AnkoComponent<SignUpFragment> {
                 }.lparams(dip(80), dip(80)) {
                     topMargin = dip(24)
                     leftMargin = dip(24)
-                    topToTop = parentId
-                    startToStart = parentId
+                    topToTop = PARENT_ID
+                    startToStart = PARENT_ID
                 }
 
                 textView("Sign Up") {
@@ -59,13 +59,13 @@ internal class SignUpFragmentUI : AnkoComponent<SignUpFragment> {
                     topMargin = dip(24)
                     leftMargin = dip(12)
                     rightMargin = dip(24)
-                    topToTop = parentId
+                    topToTop = PARENT_ID
                     bottomToBottom = R.id.signup_icon
                     startToEnd = R.id.signup_icon
-                    endToEnd = parentId
+                    endToEnd = PARENT_ID
                 }
 
-                firstNameLayout = themedTextInputLayout(R.style.TextAppearance_App_TextInputLayout) {
+                firstNameLayout = themedTextInputLayout(R.style.TextInputLayout) {
                     id = R.id.signup_first_name_layout
 
                     firstNameField = themedTextInputEditText(R.style.EditText) {
@@ -82,13 +82,12 @@ internal class SignUpFragmentUI : AnkoComponent<SignUpFragment> {
                 }.lparams(matchConstraint, wrapContent) {
                     topMargin = dip(24)
                     leftMargin = dip(24)
-                    rightMargin = dip(6)
                     topToBottom = R.id.signup_icon
-                    startToStart = parentId
+                    startToStart = PARENT_ID
                     endToStart = R.id.signup_last_name_layout
                 }
 
-                lastNameLayout = themedTextInputLayout(R.style.TextAppearance_App_TextInputLayout) {
+                lastNameLayout = themedTextInputLayout(R.style.TextInputLayout) {
                     id = R.id.signup_last_name_layout
 
                     lastNameField = themedTextInputEditText(R.style.EditText) {
@@ -105,15 +104,13 @@ internal class SignUpFragmentUI : AnkoComponent<SignUpFragment> {
                 }.lparams(matchConstraint, wrapContent) {
                     topMargin = dip(24)
                     rightMargin = dip(24)
-                    leftMargin = dip(6)
                     topToBottom = R.id.signup_icon
                     startToEnd = R.id.signup_first_name_layout
-                    endToEnd = parentId
+                    endToEnd = PARENT_ID
                 }
 
-                emailLayout = themedTextInputLayout(R.style.TextAppearance_App_TextInputLayout) {
+                emailLayout = themedTextInputLayout(R.style.TextInputLayout) {
                     id = R.id.signup_email_layout
-                    isErrorEnabled = true
 
                     emailField = themedTextInputEditText(R.style.EditText) {
                         id = R.id.signup_email
@@ -129,11 +126,11 @@ internal class SignUpFragmentUI : AnkoComponent<SignUpFragment> {
                 }.lparams(matchConstraint, wrapContent) {
                     horizontalMargin = dip(24)
                     topToBottom = R.id.signup_last_name_layout
-                    startToStart = parentId
-                    endToEnd = parentId
+                    startToStart = PARENT_ID
+                    endToEnd = PARENT_ID
                 }
 
-                firstPasswordLayout = themedTextInputLayout(R.style.TextAppearance_App_TextInputLayout) {
+                firstPasswordLayout = themedTextInputLayout(R.style.TextInputLayout) {
                     id = R.id.signup_first_password_layout
                     isPasswordVisibilityToggleEnabled = true
 
@@ -152,11 +149,11 @@ internal class SignUpFragmentUI : AnkoComponent<SignUpFragment> {
                 }.lparams(matchConstraint, wrapContent) {
                     horizontalMargin = dip(24)
                     topToBottom = R.id.signup_email_layout
-                    startToStart = parentId
-                    endToEnd = parentId
+                    startToStart = PARENT_ID
+                    endToEnd = PARENT_ID
                 }
 
-                secondPasswordLayout = themedTextInputLayout(R.style.TextAppearance_App_TextInputLayout) {
+                secondPasswordLayout = themedTextInputLayout(R.style.TextInputLayout) {
                     id = R.id.signup_second_password_layout
                     isPasswordVisibilityToggleEnabled = true
 
@@ -180,8 +177,8 @@ internal class SignUpFragmentUI : AnkoComponent<SignUpFragment> {
                 }.lparams(matchConstraint, wrapContent) {
                     horizontalMargin = dip(24)
                     topToBottom = R.id.signup_first_password_layout
-                    startToStart = parentId
-                    endToEnd = parentId
+                    startToStart = PARENT_ID
+                    endToEnd = PARENT_ID
                 }
 
 
@@ -191,8 +188,8 @@ internal class SignUpFragmentUI : AnkoComponent<SignUpFragment> {
                 }.lparams(matchConstraint, wrapContent) {
                     margin = dip(24)
                     topToBottom = R.id.signup_second_password_layout
-                    startToStart = parentId
-                    endToEnd = parentId
+                    startToStart = PARENT_ID
+                    endToEnd = PARENT_ID
                 }
 
                 signupButton = button("Sign Up") {
@@ -203,8 +200,8 @@ internal class SignUpFragmentUI : AnkoComponent<SignUpFragment> {
                     topMargin = dip(24)
                     horizontalMargin = dip(24)
                     topToBottom = R.id.signup_legal_checkbox
-                    startToStart = parentId
-                    endToEnd = parentId
+                    startToStart = PARENT_ID
+                    endToEnd = PARENT_ID
                 }
 
                 signinButton = button("Sign In") {
@@ -215,8 +212,8 @@ internal class SignUpFragmentUI : AnkoComponent<SignUpFragment> {
                     topMargin = dip(16)
                     horizontalMargin = dip(24)
                     topToBottom = R.id.signup_signup_button
-                    startToStart = parentId
-                    endToEnd = parentId
+                    startToStart = PARENT_ID
+                    endToEnd = PARENT_ID
                 }
 
             }.lparams(matchParent, wrapContent)

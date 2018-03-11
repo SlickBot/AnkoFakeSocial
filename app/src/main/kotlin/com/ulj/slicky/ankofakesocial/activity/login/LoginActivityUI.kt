@@ -1,16 +1,16 @@
 package com.ulj.slicky.ankofakesocial.activity.login
 
+import android.support.constraint.ConstraintSet.PARENT_ID
 import android.support.v4.view.ViewPager
 import com.rd.PageIndicatorView
 import com.rd.animation.type.AnimationType
 import com.ulj.slicky.ankofakesocial.R
 import com.ulj.slicky.ankofakesocial.color
-import com.ulj.slicky.ankofakesocial.utils.constraintLayout
-import com.ulj.slicky.ankofakesocial.utils.matchConstraint
-import com.ulj.slicky.ankofakesocial.utils.pageIndicatorView
-import com.ulj.slicky.ankofakesocial.utils.parentId
+import com.ulj.slicky.ankofakesocial.view.pageIndicatorView
 import org.jetbrains.anko.AnkoComponent
 import org.jetbrains.anko.AnkoContext
+import org.jetbrains.anko.constraint.layout.constraintLayout
+import org.jetbrains.anko.constraint.layout.matchConstraint
 import org.jetbrains.anko.dip
 import org.jetbrains.anko.support.v4.viewPager
 import org.jetbrains.anko.wrapContent
@@ -29,10 +29,10 @@ internal class LoginActivityUI : AnkoComponent<LoginActivity> {
                 id = R.id.login_container
             }.lparams(matchConstraint, matchConstraint) {
                 bottomMargin = dip(8)
-                topToTop = parentId
+                topToTop = PARENT_ID
                 bottomToTop = R.id.login_indicator
-                endToEnd = parentId
-                startToStart = parentId
+                endToEnd = PARENT_ID
+                startToStart = PARENT_ID
             }
             indicator = pageIndicatorView {
                 id = R.id.login_indicator
@@ -43,9 +43,9 @@ internal class LoginActivityUI : AnkoComponent<LoginActivity> {
             }.lparams(wrapContent, dip(24)) {
                 bottomMargin = dip(8)
                 topToBottom = R.id.login_container
-                bottomToBottom = parentId
-                endToEnd = parentId
-                startToStart = parentId
+                bottomToBottom = PARENT_ID
+                endToEnd = PARENT_ID
+                startToStart = PARENT_ID
             }
         }
     }

@@ -1,14 +1,14 @@
 package com.ulj.slicky.ankofakesocial.activity.settings
 
+import android.support.constraint.ConstraintSet.PARENT_ID
 import android.text.InputType
 import android.widget.EditText
 import android.widget.Switch
 import android.widget.TextView
 import com.ulj.slicky.ankofakesocial.R
-import com.ulj.slicky.ankofakesocial.utils.constraintLayout
-import com.ulj.slicky.ankofakesocial.utils.matchConstraint
-import com.ulj.slicky.ankofakesocial.utils.parentId
 import org.jetbrains.anko.*
+import org.jetbrains.anko.constraint.layout.constraintLayout
+import org.jetbrains.anko.constraint.layout.matchConstraint
 
 /**
  * Created by root on 7/14/17
@@ -38,8 +38,8 @@ internal class SettingsActivityUI : AnkoComponent<SettingsActivity> {
                 }.lparams(matchConstraint, wrapContent) {
                     topMargin = dip(16)
                     horizontalMargin = dip(16)
-                    topToTop = parentId
-                    startToStart = parentId
+                    topToTop = PARENT_ID
+                    startToStart = PARENT_ID
                     endToStart = R.id.settings_on_off_switch
                 }
 
@@ -49,7 +49,7 @@ internal class SettingsActivityUI : AnkoComponent<SettingsActivity> {
                 }.lparams(matchConstraint, wrapContent) {
                     horizontalMargin = dip(16)
                     topToBottom = R.id.settings_on_off_text
-                    startToStart = parentId
+                    startToStart = PARENT_ID
                     endToStart = R.id.settings_on_off_switch
                 }
 
@@ -59,7 +59,7 @@ internal class SettingsActivityUI : AnkoComponent<SettingsActivity> {
                     margin = dip(16)
                     topToTop = R.id.settings_on_off_text
                     bottomToBottom = R.id.settings_on_off_subtext
-                    endToEnd = parentId
+                    endToEnd = PARENT_ID
                 }
 
                 durationText = textView("Delay duration") {
@@ -69,7 +69,7 @@ internal class SettingsActivityUI : AnkoComponent<SettingsActivity> {
                     topMargin = dip(16)
                     horizontalMargin = dip(16)
                     topToBottom = R.id.settings_on_off_subtext
-                    startToStart = parentId
+                    startToStart = PARENT_ID
                     endToStart = R.id.settings_duration_field
                 }
 
@@ -79,7 +79,7 @@ internal class SettingsActivityUI : AnkoComponent<SettingsActivity> {
                 }.lparams(matchConstraint, wrapContent) {
                     horizontalMargin = dip(16)
                     topToBottom = R.id.settings_duration_text
-                    startToStart = parentId
+                    startToStart = PARENT_ID
                     endToStart = R.id.settings_duration_field
                 }
 
@@ -91,7 +91,7 @@ internal class SettingsActivityUI : AnkoComponent<SettingsActivity> {
                     horizontalMargin = dip(16)
                     topToTop = R.id.settings_duration_text
                     bottomToBottom = R.id.settings_duration_subtext
-                    endToEnd = parentId
+                    endToEnd = PARENT_ID
                 }
 
                 randomText = textView("Random delay") {
@@ -101,7 +101,7 @@ internal class SettingsActivityUI : AnkoComponent<SettingsActivity> {
                     topMargin = dip(16)
                     horizontalMargin = dip(16)
                     topToBottom = R.id.settings_duration_subtext
-                    startToStart = parentId
+                    startToStart = PARENT_ID
                     endToStart = R.id.settings_random_switch
                 }
 
@@ -111,7 +111,7 @@ internal class SettingsActivityUI : AnkoComponent<SettingsActivity> {
                 }.lparams(matchConstraint, wrapContent) {
                     horizontalMargin = dip(16)
                     topToBottom = R.id.settings_random_text
-                    startToStart = parentId
+                    startToStart = PARENT_ID
                     endToStart = R.id.settings_random_switch
                 }
 
@@ -121,7 +121,7 @@ internal class SettingsActivityUI : AnkoComponent<SettingsActivity> {
                     margin = dip(16)
                     topToTop = R.id.settings_random_text
                     bottomToBottom = R.id.settings_random_subtext
-                    endToEnd = parentId
+                    endToEnd = PARENT_ID
                 }
 
             }.lparams(matchParent, wrapContent)

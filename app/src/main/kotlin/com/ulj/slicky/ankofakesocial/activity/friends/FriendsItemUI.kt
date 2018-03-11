@@ -1,16 +1,16 @@
 package com.ulj.slicky.ankofakesocial.activity.friends
 
 import android.content.res.ColorStateList
+import android.support.constraint.ConstraintSet.PARENT_ID
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import com.ulj.slicky.ankofakesocial.R
 import com.ulj.slicky.ankofakesocial.color
-import com.ulj.slicky.ankofakesocial.utils.ChildComponent
-import com.ulj.slicky.ankofakesocial.utils.cardView
-import com.ulj.slicky.ankofakesocial.utils.constraintLayout
-import com.ulj.slicky.ankofakesocial.utils.parentId
+import com.ulj.slicky.ankofakesocial.view.ChildComponent
 import org.jetbrains.anko.*
+import org.jetbrains.anko.cardview.v7.cardView
+import org.jetbrains.anko.constraint.layout.constraintLayout
 
 /**
  * Created by root on 7/13/17
@@ -24,7 +24,7 @@ internal class FriendsItemUI(parent: ViewGroup) : ChildComponent(parent) {
     override fun createView(ui: AnkoContext<ViewGroup>) = with(ui) {
         cardView {
             id = R.id.friends_item
-            cardBackgroundColorList = ColorStateList.valueOf(ctx.color(R.color.colorPrimaryDark))
+            setCardBackgroundColor(ColorStateList.valueOf(ctx.color(R.color.colorPrimaryDark)))
             cardElevation = dip(4).toFloat()
             radius = dip(4).toFloat()
 
@@ -43,9 +43,9 @@ internal class FriendsItemUI(parent: ViewGroup) : ChildComponent(parent) {
                     verticalMargin = dip(16)
                     dimensionRatio = "H, 1:1"
                     leftMargin = dip(16)
-                    topToTop = parentId
-                    bottomToBottom = parentId
-                    leftToLeft = parentId
+                    topToTop = PARENT_ID
+                    bottomToBottom = PARENT_ID
+                    leftToLeft = PARENT_ID
                 }
 
                 name = textView {

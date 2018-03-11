@@ -5,7 +5,7 @@ apply plugin: 'kotlin-android-extensions'
 
 ext {
     support_version = '27.1.0'
-    anko_version = '0.10.3'
+    anko_version = '0.10.4'
     constraint_version = '1.1.0-beta5'
     indicator_version = '0.2.0'
 
@@ -88,6 +88,7 @@ dependencies {
     implementation "org.jetbrains.anko:anko-support-v4:$anko_version"
     implementation "org.jetbrains.anko:anko-design:$anko_version"
     implementation "org.jetbrains.anko:anko-design-coroutines:$anko_version"
+    implementation "org.jetbrains.anko:anko-constraint-layout:$anko_version"
 
     // page indicator view
     implementation "com.romandanylyk:pageindicatorview:$indicator_version@aar"

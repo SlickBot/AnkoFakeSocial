@@ -7,8 +7,8 @@ import android.view.Gravity.START
 import android.view.Gravity.TOP
 import android.widget.TextView
 import com.ulj.slicky.ankofakesocial.R
-import com.ulj.slicky.ankofakesocial.utils.themedTextInputEditText
 import org.jetbrains.anko.*
+import org.jetbrains.anko.design.themedTextInputEditText
 import org.jetbrains.anko.design.themedTextInputLayout
 import org.jetbrains.anko.sdk25.coroutines.onClick
 
@@ -26,11 +26,11 @@ internal class CreatorActivityUI : AnkoComponent<CreatorActivity> {
         relativeLayout {
             scrollView {
 
-                textLayout = themedTextInputLayout(R.style.TextAppearance_App_TextInputLayout) {
+                textLayout = themedTextInputLayout(R.style.TextInputLayout) {
                     id = R.id.creator_text_layout
                     hint = "Enter new Content here!"
-                    isCounterEnabled = true
                     counterMaxLength = 256
+                    isCounterEnabled = true
 
                     textField = themedTextInputEditText(R.style.EditText) {
                         id = R.id.creator_text

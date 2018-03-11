@@ -1,6 +1,7 @@
 package com.ulj.slicky.ankofakesocial.activity.login
 
 import android.annotation.SuppressLint
+import android.support.constraint.ConstraintSet.PARENT_ID
 import android.support.design.widget.TextInputEditText
 import android.support.design.widget.TextInputLayout
 import android.text.InputType
@@ -11,11 +12,10 @@ import android.widget.ImageView
 import android.widget.ImageView.ScaleType.FIT_CENTER
 import com.ulj.slicky.ankofakesocial.R
 import com.ulj.slicky.ankofakesocial.color
-import com.ulj.slicky.ankofakesocial.utils.constraintLayout
-import com.ulj.slicky.ankofakesocial.utils.matchConstraint
-import com.ulj.slicky.ankofakesocial.utils.parentId
-import com.ulj.slicky.ankofakesocial.utils.themedTextInputEditText
 import org.jetbrains.anko.*
+import org.jetbrains.anko.constraint.layout.constraintLayout
+import org.jetbrains.anko.constraint.layout.matchConstraint
+import org.jetbrains.anko.design.themedTextInputEditText
 import org.jetbrains.anko.design.themedTextInputLayout
 import org.jetbrains.anko.sdk25.coroutines.onClick
 
@@ -29,8 +29,8 @@ internal class SignInFragmentUI : AnkoComponent<SignInFragment> {
     lateinit var emailField: TextInputEditText
     lateinit var passwordLayout: TextInputLayout
     lateinit var passwordField: TextInputEditText
-    lateinit var signinButton: Button
-    lateinit var signupButton: Button
+    private lateinit var signinButton: Button
+    private lateinit var signupButton: Button
 
     @SuppressLint("SetTextI18n")
     override fun createView(ui: AnkoContext<SignInFragment>) = with(ui) {
@@ -42,12 +42,12 @@ internal class SignInFragmentUI : AnkoComponent<SignInFragment> {
                 contentDescription = "Logo"
             }.lparams(matchConstraint, dip(120)) {
                 topMargin = dip(32)
-                topToTop = parentId
-                startToStart = parentId
-                endToEnd = parentId
+                topToTop = PARENT_ID
+                startToStart = PARENT_ID
+                endToEnd = PARENT_ID
             }
 
-            emailLayout = themedTextInputLayout(R.style.TextAppearance_App_TextInputLayout) {
+            emailLayout = themedTextInputLayout(R.style.TextInputLayout) {
                 id = R.id.signin_email_layout
 
                 emailField = themedTextInputEditText(R.style.EditText) {
@@ -65,11 +65,11 @@ internal class SignInFragmentUI : AnkoComponent<SignInFragment> {
                 topMargin = dip(16)
                 horizontalMargin = dip(24)
                 topToBottom = R.id.signin_logo
-                startToStart = parentId
-                endToEnd = parentId
+                startToStart = PARENT_ID
+                endToEnd = PARENT_ID
             }
 
-            passwordLayout = themedTextInputLayout(R.style.TextAppearance_App_TextInputLayout) {
+            passwordLayout = themedTextInputLayout(R.style.TextInputLayout) {
                 id = R.id.signin_password_layout
                 isPasswordVisibilityToggleEnabled = true
 
@@ -85,9 +85,11 @@ internal class SignInFragmentUI : AnkoComponent<SignInFragment> {
 
                     setOnEditorActionListener { _, actionId, _ ->
                         if (actionId == EditorInfo.IME_ACTION_DONE) {
-                            owner.trySignin(); true
-                        } else
+                            owner.trySignin()
+                            true
+                        } else {
                             false
+                        }
                     }
 
                     bottomPadding = dip(16)
@@ -97,8 +99,8 @@ internal class SignInFragmentUI : AnkoComponent<SignInFragment> {
                 topMargin = dip(16)
                 horizontalMargin = dip(24)
                 topToBottom = R.id.signin_email_layout
-                startToStart = parentId
-                endToEnd = parentId
+                startToStart = PARENT_ID
+                endToEnd = PARENT_ID
             }
 
             signinButton = button("Sign In") {
@@ -109,8 +111,8 @@ internal class SignInFragmentUI : AnkoComponent<SignInFragment> {
                 topMargin = dip(24)
                 horizontalMargin = dip(24)
                 topToBottom = R.id.signin_password_layout
-                startToStart = parentId
-                endToEnd = parentId
+                startToStart = PARENT_ID
+                endToEnd = PARENT_ID
             }
 
             signupButton = button("Sign Up") {
@@ -121,8 +123,8 @@ internal class SignInFragmentUI : AnkoComponent<SignInFragment> {
                 topMargin = dip(24)
                 horizontalMargin = dip(24)
                 topToBottom = R.id.signin_signin_button
-                startToStart = parentId
-                endToEnd = parentId
+                startToStart = PARENT_ID
+                endToEnd = PARENT_ID
             }
 
             textView("Forgot your login details?") {
@@ -131,9 +133,9 @@ internal class SignInFragmentUI : AnkoComponent<SignInFragment> {
             }.lparams(wrapContent, wrapContent) {
                 margin = dip(24)
                 topToBottom = R.id.signin_signup_button
-                bottomToBottom = parentId
-                startToStart = parentId
-                endToEnd = parentId
+                bottomToBottom = PARENT_ID
+                startToStart = PARENT_ID
+                endToEnd = PARENT_ID
             }
         }
     }
