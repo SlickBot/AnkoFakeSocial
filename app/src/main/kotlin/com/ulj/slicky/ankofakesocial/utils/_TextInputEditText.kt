@@ -1,3 +1,5 @@
+@file:Suppress("ClassName", "NOTHING_TO_INLINE", "unused")
+
 package com.ulj.slicky.ankofakesocial.utils
 
 import android.app.Activity
@@ -10,7 +12,6 @@ import org.jetbrains.anko.custom.ankoView
 /**
  * Created by root on 7/12/17
  */
-
 inline fun ViewManager.textInputEditText(): TextInputEditText = textInputEditText {}
 inline fun ViewManager.textInputEditText(init: (@AnkoViewDslMarker TextInputEditText).() -> Unit): TextInputEditText {
     return ankoView(::TextInputEditText, 0, init)

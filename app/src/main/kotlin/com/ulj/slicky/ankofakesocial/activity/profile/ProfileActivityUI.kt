@@ -14,6 +14,7 @@ import org.jetbrains.anko.*
 /**
  * Created by root on 7/14/17
  */
+@Suppress("MemberVisibilityCanBePrivate")
 internal class ProfileActivityUI : AnkoComponent<ProfileActivity> {
 
     lateinit var icon: ImageView
@@ -69,7 +70,7 @@ internal class ProfileActivityUI : AnkoComponent<ProfileActivity> {
 
                 name = textView {
                     id = R.id.profile_name
-                    setTextAppearance(ctx, R.style.TextAppearance_AppCompat_Large)
+                    textAppearance = R.style.TextAppearance_Medium
                 }.lparams(wrapContent, wrapContent) {
                     horizontalMargin = dip(32)
                     topToBottom = R.id.profile_name_title
@@ -90,7 +91,7 @@ internal class ProfileActivityUI : AnkoComponent<ProfileActivity> {
 
                 email = textView {
                     id = R.id.profile_email
-                    setTextAppearance(ctx, R.style.TextAppearance_Medium)
+                    textAppearance = R.style.TextAppearance_Medium
                 }.lparams(wrapContent, wrapContent) {
                     horizontalMargin = dip(32)
                     topToBottom = R.id.profile_email_title
@@ -120,7 +121,7 @@ internal class ProfileActivityUI : AnkoComponent<ProfileActivity> {
 
                 cell = textView {
                     id = R.id.profile_cell
-                    setTextAppearance(ctx, R.style.TextAppearance_Medium)
+                    textAppearance = R.style.TextAppearance_Medium
                 }.lparams(wrapContent, wrapContent) {
                     horizontalMargin = dip(32)
                     topToBottom = R.id.profile_cell_title
@@ -141,7 +142,7 @@ internal class ProfileActivityUI : AnkoComponent<ProfileActivity> {
 
                 phone = textView {
                     id = R.id.profile_phone
-                    setTextAppearance(ctx, R.style.TextAppearance_Medium)
+                    textAppearance = R.style.TextAppearance_Medium
                 }.lparams(wrapContent, wrapContent) {
                     horizontalMargin = dip(32)
                     topToBottom = R.id.profile_phone_title
@@ -171,7 +172,7 @@ internal class ProfileActivityUI : AnkoComponent<ProfileActivity> {
 
                 birthday = textView {
                     id = R.id.profile_birthday
-                    setTextAppearance(ctx, R.style.TextAppearance_Medium)
+                    textAppearance = R.style.TextAppearance_Medium
                 }.lparams(wrapContent, wrapContent) {
                     horizontalMargin = dip(32)
                     topToBottom = R.id.profile_birthday_title
@@ -192,7 +193,7 @@ internal class ProfileActivityUI : AnkoComponent<ProfileActivity> {
 
                 registered = textView {
                     id = R.id.profile_registered
-                    setTextAppearance(ctx, R.style.TextAppearance_Medium)
+                    textAppearance = R.style.TextAppearance_Medium
                 }.lparams(wrapContent, wrapContent) {
                     horizontalMargin = dip(32)
                     topToBottom = R.id.profile_registered_title
@@ -222,7 +223,7 @@ internal class ProfileActivityUI : AnkoComponent<ProfileActivity> {
 
                 street = textView {
                     id = R.id.profile_street
-                    setTextAppearance(ctx, R.style.TextAppearance_Medium)
+                    textAppearance = R.style.TextAppearance_Medium
                 }.lparams(wrapContent, wrapContent) {
                     horizontalMargin = dip(32)
                     topToBottom = R.id.profile_street_title
@@ -243,7 +244,7 @@ internal class ProfileActivityUI : AnkoComponent<ProfileActivity> {
 
                 city = textView {
                     id = R.id.profile_city
-                    setTextAppearance(ctx, R.style.TextAppearance_Medium)
+                    textAppearance = R.style.TextAppearance_Medium
                 }.lparams(wrapContent, wrapContent) {
                     horizontalMargin = dip(32)
                     topToBottom = R.id.profile_city_title
@@ -264,7 +265,7 @@ internal class ProfileActivityUI : AnkoComponent<ProfileActivity> {
 
                 state = textView {
                     id = R.id.profile_state
-                    setTextAppearance(ctx, R.style.TextAppearance_AppCompat_Large)
+                    textAppearance = R.style.TextAppearance_Medium
                 }.lparams(wrapContent, wrapContent) {
                     horizontalMargin = dip(32)
                     topToBottom = R.id.profile_state_title
@@ -285,7 +286,7 @@ internal class ProfileActivityUI : AnkoComponent<ProfileActivity> {
 
                 nat = textView {
                     id = R.id.profile_nat
-                    setTextAppearance(ctx, R.style.TextAppearance_AppCompat_Large)
+                    textAppearance = R.style.TextAppearance_Medium
                 }.lparams(wrapContent, wrapContent) {
                     bottomMargin = dip(16)
                     horizontalMargin = dip(32)
@@ -300,7 +301,7 @@ internal class ProfileActivityUI : AnkoComponent<ProfileActivity> {
         }
     }
 
-    fun _ConstraintLayout.divider(init: (View.() -> Unit)? = null) = View(context).apply {
+    private fun _ConstraintLayout.divider(init: (View.() -> Unit)? = null) = View(context).apply {
         backgroundResource = R.color.colorPrimaryDark
         init?.invoke(this)
     }.also { addView(it) }

@@ -17,8 +17,8 @@ class ProfileActivity : BackableActivity() {
 
     companion object {
         private val TAG = ProfileActivity::class.java.canonicalName
-        private val KEY_PERSON = TAG + ".person"
-        private val KEY_OWNER = TAG + ".owner"
+        private val KEY_PERSON = "$TAG.person"
+        private val KEY_OWNER = "$TAG.owner"
 
         fun Activity.startOwnerProfile(owner: Person) {
             startActivity(intentFor<ProfileActivity>(KEY_PERSON to owner, KEY_OWNER to true))

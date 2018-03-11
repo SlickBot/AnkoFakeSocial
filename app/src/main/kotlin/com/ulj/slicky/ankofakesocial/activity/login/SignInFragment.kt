@@ -52,15 +52,15 @@ class SignInFragment : Fragment(), AnkoLogger {
     }
 
     internal fun successSignin() {
-        activity.startActivity<ContentActivity>()
-        activity.finish()
+        requireActivity().startActivity<ContentActivity>()
+        requireActivity().finish()
     }
 
     internal fun failSignin(text: String, e: Exception?) {
-        activity.displayAlert(text + if (e != null) "\n" + e.localizedMessage else "")
+        requireActivity().displayAlert(text + if (e != null) "\n" + e.localizedMessage else "")
         shakeStage()
         wtf(text, e)
     }
 
-    private fun shakeStage() = with(ui) { context.shake(emailField, passwordField) }
+    private fun shakeStage() = with(ui) { requireContext().shake(emailField, passwordField) }
 }

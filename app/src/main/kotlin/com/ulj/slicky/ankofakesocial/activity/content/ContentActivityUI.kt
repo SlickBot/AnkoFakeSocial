@@ -37,8 +37,8 @@ internal class ContentActivityUI : AnkoComponent<ContentActivity> {
             coordinatorLayout {
                 verticalLayout {
                     fitsSystemWindows = true
-                    createAppBar(ui)
-                    createContentView(ui)
+                    createAppBar()
+                    createContentView()
                 }.lparams(matchParent, matchParent)
             }.lparams(matchParent, matchParent)
 
@@ -46,7 +46,7 @@ internal class ContentActivityUI : AnkoComponent<ContentActivity> {
         }
     }
 
-    fun _LinearLayout.createAppBar(ui: AnkoContext<ContentActivity>) {
+    private fun _LinearLayout.createAppBar() {
         themedAppBarLayout(R.style.AppTheme_AppBarOverlay) {
             toolbar = toolbar {
                 id = R.id.toolbar
@@ -58,7 +58,7 @@ internal class ContentActivityUI : AnkoComponent<ContentActivity> {
         }.lparams(matchParent, wrapContent)
     }
 
-    fun _LinearLayout.createContentView(ui: AnkoContext<ContentActivity>) {
+    private fun _LinearLayout.createContentView() {
         recycler = recyclerView {
 
         }.lparams(matchParent, matchParent) {
@@ -87,13 +87,13 @@ internal class ContentActivityUI : AnkoComponent<ContentActivity> {
                     }
 
                     textView(R.string.app_name) {
-                        setTextAppearance(ctx, R.style.TextAppearance_Large)
+                        textAppearance = R.style.TextAppearance_Large
                     }.lparams(wrapContent, wrapContent) {
                         topPadding = dip(16)
                     }
 
                     textView("Where everything is fake") {
-                        setTextAppearance(ctx, R.style.TextAppearance_Small)
+                        textAppearance = R.style.TextAppearance_Small
                         textColor = ctx.color(R.color.colorTextDark)
                     }.lparams(wrapContent, wrapContent)
 

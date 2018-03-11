@@ -44,7 +44,7 @@ internal class AboutActivityUI : AnkoComponent<AboutActivity> {
 
                 textView("randomuser.me") {
                     id = R.id.about_randomuser
-                    setTextAppearance(ctx, R.style.TextAppearance_AppCompat_Large)
+                    textAppearance = R.style.TextAppearance_AppCompat_Large
                     onClick { owner.onRandomUserClick() }
                 }.lparams(wrapContent, wrapContent) {
                     topMargin = dip(40)
@@ -69,7 +69,7 @@ internal class AboutActivityUI : AnkoComponent<AboutActivity> {
 
                 textView("watchout4snakes.com") {
                     id = R.id.about_watchout
-                    setTextAppearance(ctx, R.style.TextAppearance_AppCompat_Large)
+                    textAppearance = R.style.TextAppearance_AppCompat_Large
                     onClick { owner.onWatchOutClick() }
                 }.lparams(wrapContent, wrapContent) {
                     topMargin = dip(16)

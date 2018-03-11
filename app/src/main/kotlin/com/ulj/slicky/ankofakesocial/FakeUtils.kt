@@ -23,7 +23,7 @@ import java.util.*
 const val SHAKE_DURATION = 300
 const val SHAKE_COUNT = 10
 
-fun String.capitalizeAll() = split(" ").map(String::capitalize).joinToString(separator = " ")
+fun String.capitalizeAll() = split(" ").joinToString(separator = " ", transform = String::capitalize)
 
 fun Person.fullName() = "${name.first.capitalizeAll()} ${name.last.capitalizeAll()}"
 
@@ -68,7 +68,7 @@ val TextInputLayout.text: String
 fun Context.color(id: Int) = ContextCompat.getColor(this, id)
 
 // Context.getDrawable requires min API 21
-fun Context.drawable(id: Int): Drawable = ContextCompat.getDrawable(this, id)
+fun Context.drawable(id: Int): Drawable = ContextCompat.getDrawable(this, id)!!
 
 fun Activity.displayAlert(message: String? = null, op: (AlertDialog.Builder.() -> Unit)? = null) {
     runOnUiThread {

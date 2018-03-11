@@ -13,6 +13,7 @@ import org.jetbrains.anko.*
 /**
  * Created by root on 7/14/17
  */
+@Suppress("MemberVisibilityCanBePrivate")
 internal class SettingsActivityUI : AnkoComponent<SettingsActivity> {
 
     lateinit var onOffText: TextView
@@ -33,7 +34,7 @@ internal class SettingsActivityUI : AnkoComponent<SettingsActivity> {
 
                 onOffText = textView("Notifications state") {
                     id = R.id.settings_on_off_text
-                    setTextAppearance(ctx, R.style.TextAppearance_Medium)
+                    textAppearance = R.style.TextAppearance_Medium
                 }.lparams(matchConstraint, wrapContent) {
                     topMargin = dip(16)
                     horizontalMargin = dip(16)
@@ -44,7 +45,7 @@ internal class SettingsActivityUI : AnkoComponent<SettingsActivity> {
 
                 onOffSubtext = textView("When turned on, it will start delayed notify service") {
                     id = R.id.settings_on_off_subtext
-                    setTextAppearance(ctx, R.style.TextAppearance_Small)
+                    textAppearance = R.style.TextAppearance_Small
                 }.lparams(matchConstraint, wrapContent) {
                     horizontalMargin = dip(16)
                     topToBottom = R.id.settings_on_off_text
@@ -63,7 +64,7 @@ internal class SettingsActivityUI : AnkoComponent<SettingsActivity> {
 
                 durationText = textView("Delay duration") {
                     id = R.id.settings_duration_text
-                    setTextAppearance(ctx, R.style.TextAppearance_Medium)
+                    textAppearance = R.style.TextAppearance_Medium
                 }.lparams(matchConstraint, wrapContent) {
                     topMargin = dip(16)
                     horizontalMargin = dip(16)
@@ -74,7 +75,7 @@ internal class SettingsActivityUI : AnkoComponent<SettingsActivity> {
 
                 durationSubtext = textView("Duration of delay in seconds") {
                     id = R.id.settings_duration_subtext
-                    setTextAppearance(ctx, R.style.TextAppearance_Small)
+                    textAppearance = R.style.TextAppearance_Small
                 }.lparams(matchConstraint, wrapContent) {
                     horizontalMargin = dip(16)
                     topToBottom = R.id.settings_duration_text
@@ -95,7 +96,7 @@ internal class SettingsActivityUI : AnkoComponent<SettingsActivity> {
 
                 randomText = textView("Random delay") {
                     id = R.id.settings_random_text
-                    setTextAppearance(ctx, R.style.TextAppearance_Medium)
+                    textAppearance = R.style.TextAppearance_Medium
                 }.lparams(matchConstraint, wrapContent) {
                     topMargin = dip(16)
                     horizontalMargin = dip(16)
@@ -106,7 +107,7 @@ internal class SettingsActivityUI : AnkoComponent<SettingsActivity> {
 
                 randomSubtext = textView("Random delay will be assigned") {
                     id = R.id.settings_random_subtext
-                    setTextAppearance(ctx, R.style.TextAppearance_Small)
+                    textAppearance = R.style.TextAppearance_Small
                 }.lparams(matchConstraint, wrapContent) {
                     horizontalMargin = dip(16)
                     topToBottom = R.id.settings_random_text

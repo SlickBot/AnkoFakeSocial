@@ -24,7 +24,7 @@ internal class FriendsItemUI(parent: ViewGroup) : ChildComponent(parent) {
     override fun createView(ui: AnkoContext<ViewGroup>) = with(ui) {
         cardView {
             id = R.id.friends_item
-            cardBackgroundColor = ColorStateList.valueOf(ctx.color(R.color.colorPrimaryDark))
+            cardBackgroundColorList = ColorStateList.valueOf(ctx.color(R.color.colorPrimaryDark))
             cardElevation = dip(4).toFloat()
             radius = dip(4).toFloat()
 
@@ -50,7 +50,7 @@ internal class FriendsItemUI(parent: ViewGroup) : ChildComponent(parent) {
 
                 name = textView {
                     id = R.id.friend_name
-                    setTextAppearance(context, R.style.TextAppearance_AppCompat_Large)
+                    textAppearance = R.style.TextAppearance_AppCompat_Large
                     maxLines = 1
                 }.lparams(wrapContent, wrapContent) {
                     horizontalMargin = dip(16)

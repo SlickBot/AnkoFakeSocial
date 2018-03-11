@@ -1,5 +1,6 @@
 package com.ulj.slicky.ankofakesocial.activity.login
 
+import android.annotation.SuppressLint
 import android.support.design.widget.TextInputEditText
 import android.support.design.widget.TextInputLayout
 import android.text.InputType
@@ -31,6 +32,7 @@ internal class SignInFragmentUI : AnkoComponent<SignInFragment> {
     lateinit var signinButton: Button
     lateinit var signupButton: Button
 
+    @SuppressLint("SetTextI18n")
     override fun createView(ui: AnkoContext<SignInFragment>) = with(ui) {
         constraintLayout {
 

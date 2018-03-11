@@ -2,7 +2,6 @@ package com.ulj.slicky.ankofakesocial.activity.login
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -50,7 +49,7 @@ class SignUpFragment : Fragment(), AnkoLogger {
                             firstPasswordField.string).apply { execute() }
                 }
             } else {
-                activity.displayAlert("You have to accept legal notice!")
+                requireActivity().displayAlert("You have to accept legal notice!")
             }
         } else {
             shakeStage()
@@ -58,19 +57,19 @@ class SignUpFragment : Fragment(), AnkoLogger {
     }
 
     internal fun successSignup() {
-        activity.startActivity<ContentActivity>()
-        activity.finish()
+        requireActivity().startActivity<ContentActivity>()
+        requireActivity().finish()
     }
 
     internal fun failSignup(text: String, e: Exception?) {
-        activity.displayAlert(text + if (e != null) "\n" + e.localizedMessage else "")
+        requireActivity().displayAlert(text + if (e != null) "\n" + e.localizedMessage else "")
         shakeStage()
         wtf(text, e)
     }
 
     private fun shakeStage() {
         with(ui) {
-            context.shake(firstNameField, lastNameField, emailField, firstPasswordField, secondPasswordField)
+            requireContext().shake(firstNameField, lastNameField, emailField, firstPasswordField, secondPasswordField)
         }
     }
 }

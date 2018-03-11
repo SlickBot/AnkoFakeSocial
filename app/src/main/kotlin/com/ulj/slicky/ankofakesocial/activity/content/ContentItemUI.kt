@@ -8,7 +8,6 @@ import com.ulj.slicky.ankofakesocial.R
 import com.ulj.slicky.ankofakesocial.color
 import com.ulj.slicky.ankofakesocial.utils.*
 import org.jetbrains.anko.*
-import org.jetbrains.anko.sdk25.coroutines.onClick
 
 /**
  * Created by root on 7/15/17
@@ -23,7 +22,7 @@ internal class ContentItemUI(parent: ViewGroup) : ChildComponent(parent) {
     override fun createView(ui: AnkoContext<ViewGroup>) = with(ui) {
         cardView {
             id = R.id.content_item
-            cardBackgroundColor = ColorStateList.valueOf(ctx.color(R.color.colorPrimaryDark))
+            cardBackgroundColorList = ColorStateList.valueOf(ctx.color(R.color.colorPrimaryDark))
             cardElevation = dip(4).toFloat()
             radius = dip(4).toFloat()
 
@@ -37,7 +36,6 @@ internal class ContentItemUI(parent: ViewGroup) : ChildComponent(parent) {
                 image = imageView(R.drawable.ic_user) {
                     id = R.id.content_owner_image
                     contentDescription = "Profile photo of friend"
-                    onClick { owner }
                 }.lparams(dip(64), dip(64)) {
                     topMargin = dip(16)
                     horizontalMargin = dip(16)
@@ -57,7 +55,7 @@ internal class ContentItemUI(parent: ViewGroup) : ChildComponent(parent) {
 
                 content = textView {
                     id = R.id.content_content
-                    setTextAppearance(ctx, R.style.TextAppearance_Medium)
+                    textAppearance = R.style.TextAppearance_Medium
                 }.lparams(matchConstraint, wrapContent) {
                     horizontalMargin = dip(16)
                     topToBottom = R.id.content_owner_name

@@ -34,7 +34,6 @@ class ContentActivity : AppCompatActivity(), NavigationView.OnNavigationItemSele
             signOut()
 
         super.onCreate(savedInstanceState)
-//        setContentView(R.layout.content_activity)
         ui = ContentActivityUI().also {
             it.setContentView(this)
         }

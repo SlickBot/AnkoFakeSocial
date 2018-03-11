@@ -1,3 +1,5 @@
+@file:Suppress("ClassName", "NOTHING_TO_INLINE", "unused")
+
 package com.ulj.slicky.ankofakesocial.utils
 
 import android.app.Activity

@@ -29,7 +29,7 @@ class DetailActivity : BackableActivity(), AnkoLogger {
 
     companion object {
         private val TAG = ProfileActivity::class.java.canonicalName
-        private val KEY_CONTENT = TAG + ".contents"
+        private val KEY_CONTENT = "$TAG.contents"
 
         fun Activity.startDetail(content: Content) {
             startActivity(intentFor<DetailActivity>(KEY_CONTENT to content))
@@ -41,6 +41,7 @@ class DetailActivity : BackableActivity(), AnkoLogger {
 
     private var task: RemoveTask? = null
 
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -62,7 +63,6 @@ class DetailActivity : BackableActivity(), AnkoLogger {
                     .into(ui.ownerImage)
 
             ui.ownerName.text = name
-            @SuppressLint("SetTextI18n")
             ui.postedAt.text = "Posted at: $postedAtDate"
             ui.detailText.text = text
         }

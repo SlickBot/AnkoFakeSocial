@@ -36,7 +36,7 @@ internal class DetailActivityUI :  AnkoComponent<DetailActivity> {
 
             ownerName = textView {
                 id = R.id.detail_owner_name
-                setTextAppearance(ctx, R.style.TextAppearance_AppCompat_Large)
+                textAppearance = R.style.TextAppearance_AppCompat_Large
             }.lparams(matchConstraint, wrapContent) {
                 horizontalMargin = dip(24)
                 topToTop = R.id.detail_image
@@ -47,7 +47,7 @@ internal class DetailActivityUI :  AnkoComponent<DetailActivity> {
 
             postedAt = textView {
                 id = R.id.detail_posted_at
-                setTextAppearance(ctx, R.style.TextAppearance_AppCompat_Small)
+                textAppearance = R.style.TextAppearance_AppCompat_Small
                 textColor = ctx.color(R.color.colorTextDark)
             }.lparams(matchConstraint, wrapContent) {
                 horizontalMargin = dip(24)
@@ -60,7 +60,7 @@ internal class DetailActivityUI :  AnkoComponent<DetailActivity> {
             scrollView {
                 detailText = textView {
                     id = R.id.detail_text
-                    setTextAppearance(ctx, R.style.TextAppearance_AppCompat_Large)
+                    textAppearance = R.style.TextAppearance_AppCompat_Large
                     gravity = Gravity.CENTER_HORIZONTAL
                 }.lparams(matchParent, wrapContent) {
                     margin = dip(24)

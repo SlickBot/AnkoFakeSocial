@@ -1,4 +1,4 @@
-@file:Suppress("NOTHING_TO_INLINE", "unused")
+@file:Suppress("ClassName", "NOTHING_TO_INLINE", "unused")
 
 package com.ulj.slicky.ankofakesocial.utils
 
@@ -121,32 +121,37 @@ open class _ConstraintLayout(ctx: Context) : ConstraintLayout(ctx) {
     }
 }
 
+@Suppress("NOTHING_TO_INLINE", "unused")
 inline fun ViewManager.constraintLayout(): _ConstraintLayout = constraintLayout {}
 inline fun ViewManager.constraintLayout(init: (@AnkoViewDslMarker _ConstraintLayout).() -> Unit): _ConstraintLayout {
     return ankoView(::_ConstraintLayout, theme = 0) { init() }
 }
 
+@Suppress("NOTHING_TO_INLINE", "unused")
 inline fun ViewManager.themedConstraintLayout(theme: Int = 0): _ConstraintLayout = themedConstraintLayout(theme) {}
 inline fun ViewManager.themedConstraintLayout(theme: Int = 0, init: (@AnkoViewDslMarker _ConstraintLayout).() -> Unit): _ConstraintLayout {
     return ankoView(::_ConstraintLayout, theme) { init() }
 }
 
+@Suppress("NOTHING_TO_INLINE", "unused")
 inline fun Context.constraintLayout(): _ConstraintLayout = constraintLayout {}
 inline fun Context.constraintLayout(init: (@AnkoViewDslMarker _ConstraintLayout).() -> Unit): _ConstraintLayout {
     return ankoView(::_ConstraintLayout, theme = 0) { init() }
 }
 
+@Suppress("NOTHING_TO_INLINE", "unused")
 inline fun Context.themedConstraintLayout(theme: Int = 0): _ConstraintLayout = themedConstraintLayout(theme) {}
 inline fun Context.themedConstraintLayout(theme: Int = 0, init: (@AnkoViewDslMarker _ConstraintLayout).() -> Unit): _ConstraintLayout {
     return ankoView(::_ConstraintLayout, theme) { init() }
 }
 
+@Suppress("NOTHING_TO_INLINE", "unused")
 inline fun Activity.constraintLayout(): _ConstraintLayout = constraintLayout {}
 inline fun Activity.constraintLayout(init: (@AnkoViewDslMarker _ConstraintLayout).() -> Unit): _ConstraintLayout {
     return ankoView(::_ConstraintLayout, theme = 0) { init() }
 }
 
-val parentId: Int = ConstraintLayout.LayoutParams.PARENT_ID
-val matchConstraint: Int = ConstraintLayout.LayoutParams.MATCH_CONSTRAINT
-val matchConstraintWrap: Int = ConstraintLayout.LayoutParams.MATCH_CONSTRAINT_WRAP
-val matchConstraintSpread: Int = ConstraintLayout.LayoutParams.MATCH_CONSTRAINT_SPREAD
+const val parentId: Int = ConstraintLayout.LayoutParams.PARENT_ID
+const val matchConstraint: Int = ConstraintLayout.LayoutParams.MATCH_CONSTRAINT
+const val matchConstraintWrap: Int = ConstraintLayout.LayoutParams.MATCH_CONSTRAINT_WRAP
+const val matchConstraintSpread: Int = ConstraintLayout.LayoutParams.MATCH_CONSTRAINT_SPREAD

@@ -1,3 +1,5 @@
+@file:Suppress("ClassName", "NOTHING_TO_INLINE", "unused")
+
 package com.ulj.slicky.ankofakesocial.utils
 
 import android.app.Activity
@@ -14,9 +16,13 @@ import org.jetbrains.anko.custom.ankoView
 /**
  * Created by root on 7/13/17
  */
-open class _CardView(ctx: Context): CardView(ctx) {
+open class _CardView(ctx: Context) : CardView(ctx) {
 
-    inline fun <T: View> T.lparams(
+    var cardBackgroundColorList
+        set(value) = setCardBackgroundColor(value)
+        get() = cardBackgroundColor
+
+    inline fun <T : View> T.lparams(
             c: Context?,
             attrs: AttributeSet?,
             init: FrameLayout.LayoutParams.() -> Unit
@@ -27,7 +33,7 @@ open class _CardView(ctx: Context): CardView(ctx) {
         return this
     }
 
-    inline fun <T: View> T.lparams(
+    inline fun <T : View> T.lparams(
             c: Context?,
             attrs: AttributeSet?
     ): T {
@@ -36,7 +42,7 @@ open class _CardView(ctx: Context): CardView(ctx) {
         return this
     }
 
-    inline fun <T: View> T.lparams(
+    inline fun <T : View> T.lparams(
             width: Int = android.view.ViewGroup.LayoutParams.WRAP_CONTENT,
             height: Int = android.view.ViewGroup.LayoutParams.WRAP_CONTENT,
             init: FrameLayout.LayoutParams.() -> Unit
@@ -47,7 +53,7 @@ open class _CardView(ctx: Context): CardView(ctx) {
         return this
     }
 
-    inline fun <T: View> T.lparams(
+    inline fun <T : View> T.lparams(
             width: Int = android.view.ViewGroup.LayoutParams.WRAP_CONTENT,
             height: Int = android.view.ViewGroup.LayoutParams.WRAP_CONTENT
     ): T {
@@ -56,7 +62,7 @@ open class _CardView(ctx: Context): CardView(ctx) {
         return this
     }
 
-    inline fun <T: View> T.lparams(
+    inline fun <T : View> T.lparams(
             width: Int = android.view.ViewGroup.LayoutParams.WRAP_CONTENT,
             height: Int = android.view.ViewGroup.LayoutParams.WRAP_CONTENT,
             gravity: Int,
@@ -68,7 +74,7 @@ open class _CardView(ctx: Context): CardView(ctx) {
         return this
     }
 
-    inline fun <T: View> T.lparams(
+    inline fun <T : View> T.lparams(
             width: Int = android.view.ViewGroup.LayoutParams.WRAP_CONTENT,
             height: Int = android.view.ViewGroup.LayoutParams.WRAP_CONTENT,
             gravity: Int
@@ -78,7 +84,7 @@ open class _CardView(ctx: Context): CardView(ctx) {
         return this
     }
 
-    inline fun <T: View> T.lparams(
+    inline fun <T : View> T.lparams(
             source: ViewGroup.LayoutParams?,
             init: FrameLayout.LayoutParams.() -> Unit
     ): T {
@@ -88,7 +94,7 @@ open class _CardView(ctx: Context): CardView(ctx) {
         return this
     }
 
-    inline fun <T: View> T.lparams(
+    inline fun <T : View> T.lparams(
             source: ViewGroup.LayoutParams?
     ): T {
         val layoutParams = FrameLayout.LayoutParams(source!!)
@@ -96,7 +102,7 @@ open class _CardView(ctx: Context): CardView(ctx) {
         return this
     }
 
-    inline fun <T: View> T.lparams(
+    inline fun <T : View> T.lparams(
             source: ViewGroup.MarginLayoutParams?,
             init: FrameLayout.LayoutParams.() -> Unit
     ): T {
@@ -106,7 +112,7 @@ open class _CardView(ctx: Context): CardView(ctx) {
         return this
     }
 
-    inline fun <T: View> T.lparams(
+    inline fun <T : View> T.lparams(
             source: ViewGroup.MarginLayoutParams?
     ): T {
         val layoutParams = FrameLayout.LayoutParams(source!!)
@@ -114,7 +120,7 @@ open class _CardView(ctx: Context): CardView(ctx) {
         return this
     }
 
-    inline fun <T: View> T.lparams(
+    inline fun <T : View> T.lparams(
             source: FrameLayout.LayoutParams?,
             init: FrameLayout.LayoutParams.() -> Unit
     ): T {
@@ -124,7 +130,7 @@ open class _CardView(ctx: Context): CardView(ctx) {
         return this
     }
 
-    inline fun <T: View> T.lparams(
+    inline fun <T : View> T.lparams(
             source: FrameLayout.LayoutParams?
     ): T {
         val layoutParams = FrameLayout.LayoutParams(source!!)
