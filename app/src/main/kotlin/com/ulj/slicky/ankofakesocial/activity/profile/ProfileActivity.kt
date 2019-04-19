@@ -38,8 +38,8 @@ class ProfileActivity : BackableActivity() {
             it.setContentView(this)
         }
 
-        val extras = intent.extras
-        val person = extras.getParcelable<Person>(KEY_PERSON)
+        val extras = intent.extras ?: return
+        val person = extras.getParcelable<Person>(KEY_PERSON) ?: return
         val isOwner = extras.getBoolean(KEY_OWNER)
 
         title = if (isOwner) "Your Profile" else person.fullName()
@@ -55,8 +55,8 @@ class ProfileActivity : BackableActivity() {
             ui.email.text = email
             ui.cell.text = cell
             ui.phone.text = phone
-            ui.birthday.text = dob.formattedWithTime()
-            ui.registered.text = registered.formattedWithTime()
+            ui.birthday.text = dob.date.formattedWithTime()
+            ui.registered.text = registered.date.formattedWithTime()
             ui.nat.text = nat.codeToCountry()
 
             with(location) {
@@ -67,4 +67,5 @@ class ProfileActivity : BackableActivity() {
         }
 
     }
+
 }

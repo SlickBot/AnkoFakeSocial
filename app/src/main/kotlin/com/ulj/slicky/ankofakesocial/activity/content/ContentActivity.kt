@@ -20,7 +20,9 @@ import com.ulj.slicky.ankofakesocial.displayAlert
 import com.ulj.slicky.ankofakesocial.model.content.Content
 import org.jetbrains.anko.*
 
-
+/**
+ * Created by root on 7/15/17
+ */
 class ContentActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener, AnkoLogger {
 
     private lateinit var ui: ContentActivityUI
@@ -113,8 +115,9 @@ class ContentActivity : AppCompatActivity(), NavigationView.OnNavigationItemSele
     internal fun handleError(text: String, e: Exception?) {
         displayAlert(text + if (e != null) "\n" + e.localizedMessage else "") {
             setCancelable(false)
-            setPositiveButton("Sign Out", { _, _ -> signOut() })
+            setPositiveButton("Sign Out") { _, _ -> signOut() }
         }
         wtf(text, e)
     }
+
 }

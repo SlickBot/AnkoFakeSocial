@@ -8,7 +8,6 @@ import org.jetbrains.anko.AnkoLogger
 import org.jetbrains.anko.setContentView
 import org.jetbrains.anko.wtf
 
-
 /**
  * Created by SlickyPC on 30.5.2017
  */
@@ -39,7 +38,7 @@ class CreatorActivity : BackableActivity(), AnkoLogger {
     internal fun onCreatingSuccess() {
         displayAlert("Successfully uploaded new Content!") {
             setCancelable(false)
-            setPositiveButton("Cool!", { _, _ -> finish() })
+            setPositiveButton("Cool!") { _, _ -> finish() }
         }
     }
 
@@ -47,4 +46,5 @@ class CreatorActivity : BackableActivity(), AnkoLogger {
         displayAlert(text + if (e != null) "\n" + e.localizedMessage else "")
         wtf(text, e)
     }
+
 }

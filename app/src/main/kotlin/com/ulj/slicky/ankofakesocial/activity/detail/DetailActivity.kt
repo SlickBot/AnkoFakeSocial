@@ -49,8 +49,8 @@ class DetailActivity : BackableActivity(), AnkoLogger {
             it.setContentView(this)
         }
 
-        val extras = intent.extras
-        content = extras.getParcelable(KEY_CONTENT)
+        val extras = intent.extras ?: return
+        content = extras.getParcelable(KEY_CONTENT) ?: return
 
         with(content) {
             val imageUrl = owner.picture.large
@@ -101,4 +101,5 @@ class DetailActivity : BackableActivity(), AnkoLogger {
             setNegativeButton("No") { dialog, _ -> dialog.dismiss() }
         }
     }
+
 }

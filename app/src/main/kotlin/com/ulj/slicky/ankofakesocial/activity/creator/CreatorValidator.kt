@@ -26,4 +26,5 @@ internal class CreatorValidator(val activity: CreatorActivity) {
 
         return true
     }
+
 }

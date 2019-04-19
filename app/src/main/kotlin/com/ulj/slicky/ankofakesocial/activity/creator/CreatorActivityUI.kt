@@ -12,7 +12,6 @@ import org.jetbrains.anko.design.themedTextInputEditText
 import org.jetbrains.anko.design.themedTextInputLayout
 import org.jetbrains.anko.sdk25.coroutines.onClick
 
-
 /**
  * Created by root on 7/12/17
  */
@@ -59,4 +58,5 @@ internal class CreatorActivityUI : AnkoComponent<CreatorActivity> {
             }
         }
     }
+
 }

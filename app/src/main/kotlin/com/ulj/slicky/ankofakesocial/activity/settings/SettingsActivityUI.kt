@@ -127,4 +127,5 @@ internal class SettingsActivityUI : AnkoComponent<SettingsActivity> {
             }.lparams(matchParent, wrapContent)
         }
     }
+
 }

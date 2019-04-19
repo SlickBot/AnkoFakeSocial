@@ -83,4 +83,5 @@ internal class SignUpValidator(val ui: SignUpFragmentUI) {
             return true
         }
     }
+
 }

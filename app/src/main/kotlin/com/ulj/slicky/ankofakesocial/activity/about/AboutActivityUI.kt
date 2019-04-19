@@ -83,4 +83,5 @@ internal class AboutActivityUI : AnkoComponent<AboutActivity> {
             }.lparams(matchParent, wrapContent)
         }
     }
+
 }

@@ -80,4 +80,5 @@ internal class ContentItemUI(parent: ViewGroup) : ChildComponent(parent) {
             }.lparams(matchParent, wrapContent)
         }
     }
+
 }

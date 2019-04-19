@@ -31,7 +31,7 @@ class SignInFragment : Fragment(), AnkoLogger {
 
     @SuppressLint("SetTextI18n")
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return SignInFragmentUI().also { ui = it }.createView(AnkoContext.Companion.create(ctx, this))
+        return SignInFragmentUI().also { ui = it }.createView(AnkoContext.create(ctx, this))
     }
 
     override fun onDetach() {
@@ -63,4 +63,5 @@ class SignInFragment : Fragment(), AnkoLogger {
     }
 
     private fun shakeStage() = with(ui) { requireContext().shake(emailField, passwordField) }
+
 }

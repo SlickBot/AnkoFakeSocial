@@ -78,3 +78,10 @@ fun Activity.displayAlert(message: String? = null, op: (AlertDialog.Builder.() -
         }.show()
     }
 }
+
+//suspend fun <E, T> Iterable<E>.mapAsyncUnordered(op: (E) -> (T)): List<T> {
+//    val l = mutableListOf<T>()
+//    val tasks = map { async { l.add(op(it)) } }
+//    tasks.forEach { it.await() }
+//    return l.toList()
+//}

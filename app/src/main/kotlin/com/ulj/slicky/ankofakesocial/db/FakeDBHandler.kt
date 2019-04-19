@@ -127,8 +127,8 @@ object FakeDBHandler : DBHandler {
 
     @Throws(IOException::class)
     private fun generateContent() = mutableListOf<Content>().also { list ->
-
         friendList?.let { friends ->
+
             repeat(10) {
 
                 // Blocking api request for new Content text.
@@ -151,6 +151,7 @@ object FakeDBHandler : DBHandler {
                 // Create new Content and add it to list.
                 val content = Content(random.nextLong(), randy, query, lastPostTime - timePassed)
                 list.add(content)
+
             }
         }
     }
@@ -158,4 +159,5 @@ object FakeDBHandler : DBHandler {
     private fun simulateWork() {
         TimeUnit.SECONDS.sleep(1)
     }
+
 }

@@ -31,4 +31,5 @@ interface DBHandler {
 
     @Throws(IOException::class)
     fun getContent(): List<Content>
+
 }

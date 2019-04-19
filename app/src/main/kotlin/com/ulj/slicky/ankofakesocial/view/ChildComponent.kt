@@ -8,5 +8,5 @@ import org.jetbrains.anko.AnkoContext
  * Created by root on 7/13/17
  */
 abstract class ChildComponent(val parent: ViewGroup) : AnkoComponent<ViewGroup> {
-    val view by lazy { createView(AnkoContext.Companion.create(parent.context, parent)) }
+    val view by lazy { createView(AnkoContext.create(parent.context, parent)) }
 }

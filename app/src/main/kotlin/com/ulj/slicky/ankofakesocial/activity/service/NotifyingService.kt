@@ -80,4 +80,5 @@ class NotifyingService : IntentService("NotifyingService") {
         @Suppress("DEPRECATION")
         vibrator.vibrate(500)
     }
+
 }

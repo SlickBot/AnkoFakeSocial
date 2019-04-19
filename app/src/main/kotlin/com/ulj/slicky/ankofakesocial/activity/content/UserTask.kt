@@ -21,4 +21,5 @@ internal class UserTask(activity: ContentActivity)
     override fun success(result: Person) = activityReference.get()?.startOwnerProfile(result)
 
     override fun fail(e: Exception) = activityReference.get()?.handleError("Could not load User data!", e)
+
 }

@@ -42,4 +42,5 @@ class LoginActivity : AppCompatActivity() {
     fun onLostDetailsClick() {
         toast("Well, that sucks.")
     }
+
 }

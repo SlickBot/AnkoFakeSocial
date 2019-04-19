@@ -63,4 +63,5 @@ class FriendsActivity : BackableActivity(), AnkoLogger {
         startActivity<LoginActivity>()
         finish()
     }
+
 }

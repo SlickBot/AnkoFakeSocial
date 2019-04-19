@@ -29,7 +29,7 @@ class SignUpFragment : Fragment(), AnkoLogger {
     private var task: SignUpTask? = null
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
-        return SignUpFragmentUI().also { ui = it }.createView(AnkoContext.Companion.create(ctx, this))
+        return SignUpFragmentUI().also { ui = it }.createView(AnkoContext.create(ctx, this))
     }
 
     override fun onDetach() {
@@ -72,4 +72,5 @@ class SignUpFragment : Fragment(), AnkoLogger {
             requireContext().shake(firstNameField, lastNameField, emailField, firstPasswordField, secondPasswordField)
         }
     }
+
 }

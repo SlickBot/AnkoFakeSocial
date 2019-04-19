@@ -17,4 +17,5 @@ internal class FriendsActivityUI : AnkoComponent<FriendsActivity> {
             recycler = this
         }
     }
+
 }

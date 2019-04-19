@@ -105,4 +105,5 @@ internal class ContentActivityUI : AnkoComponent<ContentActivity> {
             }.view)
         }.lparams(wrapContent, matchParent, gravity = Gravity.START)
     }
+
 }

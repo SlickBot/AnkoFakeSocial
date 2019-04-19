@@ -72,4 +72,5 @@ internal class FriendsItemUI(parent: ViewGroup) : ChildComponent(parent) {
             }.lparams(matchParent, wrapContent)
         }
     }
+
 }

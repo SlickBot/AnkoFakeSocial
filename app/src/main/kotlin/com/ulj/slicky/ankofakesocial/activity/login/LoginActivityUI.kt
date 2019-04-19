@@ -49,4 +49,5 @@ internal class LoginActivityUI : AnkoComponent<LoginActivity> {
             }
         }
     }
+
 }

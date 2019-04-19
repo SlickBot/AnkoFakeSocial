@@ -55,4 +55,5 @@ internal class ContentAdapter(private val activity: ContentActivity,
     }
 
     override fun getItemCount() = contents.size
+
 }
