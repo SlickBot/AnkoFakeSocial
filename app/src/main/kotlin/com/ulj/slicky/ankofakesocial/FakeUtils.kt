@@ -79,9 +79,6 @@ fun Activity.displayAlert(message: String? = null, op: (AlertDialog.Builder.() -
     }
 }
 
-//suspend fun <E, T> Iterable<E>.mapAsyncUnordered(op: (E) -> (T)): List<T> {
-//    val l = mutableListOf<T>()
-//    val tasks = map { async { l.add(op(it)) } }
-//    tasks.forEach { it.await() }
-//    return l.toList()
-//}
+fun isAppiumTest() = BuildConfig.BUILD_VERSION == "APPIUM"
+
+fun isDebug() = BuildConfig.BUILD_VERSION == "DEBUG"

@@ -7,6 +7,7 @@ import com.ulj.slicky.ankofakesocial.R
 import com.ulj.slicky.ankofakesocial.activity.profile.ProfileActivity.Companion.startFriendProfile
 import com.ulj.slicky.ankofakesocial.fullName
 import com.ulj.slicky.ankofakesocial.info
+import com.ulj.slicky.ankofakesocial.isAppiumTest
 import com.ulj.slicky.ankofakesocial.model.person.Person
 import jp.wasabeef.picasso.transformations.CropCircleTransformation
 
@@ -42,11 +43,19 @@ internal class FriendsAdapter(
             friendName.text = friend.fullName()
             friendInfo.text = friend.info()
 
-            Picasso.with(activity)
-                    .load(friend.picture.medium)
-                    .placeholder(R.drawable.ic_user)
-                    .transform(CropCircleTransformation())
-                    .into(friendImage)
+            if (isAppiumTest()) {
+                Picasso.with(activity)
+                        .load(R.drawable.test_img)
+                        .placeholder(R.drawable.ic_user)
+                        .transform(CropCircleTransformation())
+                        .into(friendImage)
+            } else {
+                Picasso.with(activity)
+                        .load(friend.picture.medium)
+                        .placeholder(R.drawable.ic_user)
+                        .transform(CropCircleTransformation())
+                        .into(friendImage)
+            }
         }
     }
 

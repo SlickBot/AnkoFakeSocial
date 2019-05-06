@@ -6,13 +6,10 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import com.squareup.picasso.Picasso
-import com.ulj.slicky.ankofakesocial.R
+import com.ulj.slicky.ankofakesocial.*
 import com.ulj.slicky.ankofakesocial.activity.BackableActivity
 import com.ulj.slicky.ankofakesocial.activity.profile.ProfileActivity
 import com.ulj.slicky.ankofakesocial.activity.profile.ProfileActivity.Companion.startFriendProfile
-import com.ulj.slicky.ankofakesocial.displayAlert
-import com.ulj.slicky.ankofakesocial.formattedWithTime
-import com.ulj.slicky.ankofakesocial.fullName
 import com.ulj.slicky.ankofakesocial.model.content.Content
 import jp.wasabeef.picasso.transformations.CropCircleTransformation
 import org.jetbrains.anko.AnkoLogger
@@ -57,10 +54,17 @@ class DetailActivity : BackableActivity(), AnkoLogger {
             val name = owner.fullName()
             val postedAtDate = Date(postedAt).formattedWithTime()
 
-            Picasso.with(this@DetailActivity).load(imageUrl)
-                    .placeholder(R.drawable.ic_user)
-                    .transform(CropCircleTransformation())
-                    .into(ui.ownerImage)
+            if (isAppiumTest()) {
+                Picasso.with(this@DetailActivity).load(R.drawable.test_img)
+                        .placeholder(R.drawable.ic_user)
+                        .transform(CropCircleTransformation())
+                        .into(ui.ownerImage)
+            } else {
+                Picasso.with(this@DetailActivity).load(imageUrl)
+                        .placeholder(R.drawable.ic_user)
+                        .transform(CropCircleTransformation())
+                        .into(ui.ownerImage)
+            }
 
             ui.ownerName.text = name
             ui.postedAt.text = "Posted at: $postedAtDate"

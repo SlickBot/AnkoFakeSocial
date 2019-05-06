@@ -7,6 +7,7 @@ import com.ulj.slicky.ankofakesocial.R
 import com.ulj.slicky.ankofakesocial.activity.detail.DetailActivity.Companion.startDetail
 import com.ulj.slicky.ankofakesocial.formattedWithTime
 import com.ulj.slicky.ankofakesocial.fullName
+import com.ulj.slicky.ankofakesocial.isAppiumTest
 import com.ulj.slicky.ankofakesocial.model.content.Content
 import jp.wasabeef.picasso.transformations.CropCircleTransformation
 import java.util.*
@@ -46,11 +47,19 @@ internal class ContentAdapter(private val activity: ContentActivity,
             postedAt.text = date.formattedWithTime()
             content.text = newContent.text
 
-            Picasso.with(activity)
-                    .load(owner.picture.medium)
-                    .placeholder(R.drawable.ic_user)
-                    .transform(CropCircleTransformation())
-                    .into(ownerImage)
+            if (isAppiumTest()) {
+                Picasso.with(activity)
+                        .load(R.drawable.test_img)
+                        .placeholder(R.drawable.ic_user)
+                        .transform(CropCircleTransformation())
+                        .into(ownerImage)
+            } else {
+                Picasso.with(activity)
+                        .load(owner.picture.medium)
+                        .placeholder(R.drawable.ic_user)
+                        .transform(CropCircleTransformation())
+                        .into(ownerImage)
+            }
         }
     }
 
